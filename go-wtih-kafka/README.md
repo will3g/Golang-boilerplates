@@ -4,7 +4,7 @@ This is a boilerplate project for building applications with **Golang**, **Kafka
 ![Dashboard](https://imgur.com/qJISiEH.png)
 
 # Getting Started
-To get started with this project, you will need to have Docker and Golang installed on your machine.
+To get started with this project, you will need to have Docker and Docker compose installed on your machine.
 
 ## Prerequisites
 - Docker

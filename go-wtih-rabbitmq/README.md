@@ -1,5 +1,5 @@
 # Golang with RabbitMQ Boilerplate
-The **go-with-rabbitmq** service is a simple Go application that connects to a RabbitMQ message broker and publishes a message to a queue. The application uses the ```github.com/streadway/amqp``` package to interact with RabbitMQ.
+The **go-with-rabbitmq** service is a simple Go application that connects to a RabbitMQ message broker and publishes a message to a queue.
 
 ![Dashboard RabbitMQ](https://imgur.com/xCUd8bh.png)
 

@@ -1,0 +1,38 @@
+type Author {
+  id: ID!
+  name: String!
+  description: String
+  email: String
+  articles: [Article!]!
+}
+
+input AuthorInstance {
+  name: String
+  description: String
+  email: String!
+}
+
+type Article {
+  id: ID!
+  title: String!
+  subtitle: String
+  body: String
+  authorId: Author!
+}
+
+input ArticleInstance {
+  title: String!
+  subtitle: String
+  body: String
+  authorId: ID!
+}
+
+type Query {
+  authors: [Author!]!
+  articles: [Article!]!
+}
+
+type Mutation {
+  createAuthor(input: AuthorInstance!): Author!
+  createArticle(input: ArticleInstance!): Article!
+}

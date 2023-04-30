@@ -52,10 +52,10 @@ autobind:
 models:
   Article:
     model:
-      - github.com/will3g/golang-boilerplates/golang-graphql/graph/model.Article
+      - github.com/will3g/golang-boilerplates/go-with-graphql/graph/model.Article
   Author:
     model:
-      - github.com/will3g/golang-boilerplates/golang-graphql/graph/model.Author
+      - github.com/will3g/golang-boilerplates/go-with-graphql/graph/model.Author
   ID:
     model:
       - github.com/99designs/gqlgen/graphql.ID

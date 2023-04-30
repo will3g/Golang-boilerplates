@@ -1,4 +1,4 @@
-module github.com/will3g/golang-boilerplates/golang-graphql
+module github.com/will3g/golang-boilerplates/go-with-graphql
 
 go 1.20
 

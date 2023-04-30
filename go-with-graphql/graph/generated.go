@@ -16,7 +16,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/introspection"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
-	"github.com/will3g/golang-boilerplates/golang-graphql/graph/model"
+	"github.com/will3g/golang-boilerplates/go-with-graphql/graph/model"
 )
 
 // region    ************************** generated!.gotpl **************************
@@ -307,7 +307,7 @@ func (ec *executionContext) field_Mutation_createArticle_args(ctx context.Contex
 	var arg0 model.ArticleInstance
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNArticleInstance2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticleInstance(ctx, tmp)
+		arg0, err = ec.unmarshalNArticleInstance2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticleInstance(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -322,7 +322,7 @@ func (ec *executionContext) field_Mutation_createAuthor_args(ctx context.Context
 	var arg0 model.AuthorInstance
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNAuthorInstance2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthorInstance(ctx, tmp)
+		arg0, err = ec.unmarshalNAuthorInstance2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthorInstance(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -582,7 +582,7 @@ func (ec *executionContext) _Article_authorId(ctx context.Context, field graphql
 	}
 	res := resTmp.(*model.Author)
 	fc.Result = res
-	return ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, field.Selections, res)
+	return ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Article_authorId(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -808,7 +808,7 @@ func (ec *executionContext) _Author_articles(ctx context.Context, field graphql.
 	}
 	res := resTmp.([]*model.Article)
 	fc.Result = res
-	return ec.marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx, field.Selections, res)
+	return ec.marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Author_articles(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -864,7 +864,7 @@ func (ec *executionContext) _Mutation_createAuthor(ctx context.Context, field gr
 	}
 	res := resTmp.(*model.Author)
 	fc.Result = res
-	return ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, field.Selections, res)
+	return ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createAuthor(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -931,7 +931,7 @@ func (ec *executionContext) _Mutation_createArticle(ctx context.Context, field g
 	}
 	res := resTmp.(*model.Article)
 	fc.Result = res
-	return ec.marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx, field.Selections, res)
+	return ec.marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createArticle(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -998,7 +998,7 @@ func (ec *executionContext) _Query_authors(ctx context.Context, field graphql.Co
 	}
 	res := resTmp.([]*model.Author)
 	fc.Result = res
-	return ec.marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthorᚄ(ctx, field.Selections, res)
+	return ec.marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthorᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_authors(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1054,7 +1054,7 @@ func (ec *executionContext) _Query_articles(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*model.Article)
 	fc.Result = res
-	return ec.marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx, field.Selections, res)
+	return ec.marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_articles(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -3668,11 +3668,11 @@ func (ec *executionContext) ___Type(ctx context.Context, sel ast.SelectionSet, o
 
 // region    ***************************** type.gotpl *****************************
 
-func (ec *executionContext) marshalNArticle2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx context.Context, sel ast.SelectionSet, v model.Article) graphql.Marshaler {
+func (ec *executionContext) marshalNArticle2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx context.Context, sel ast.SelectionSet, v model.Article) graphql.Marshaler {
 	return ec._Article(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Article) graphql.Marshaler {
+func (ec *executionContext) marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticleᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Article) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3696,7 +3696,7 @@ func (ec *executionContext) marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgolang
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx, sel, v[i])
+			ret[i] = ec.marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3716,7 +3716,7 @@ func (ec *executionContext) marshalNArticle2ᚕᚖgithubᚗcomᚋwill3gᚋgolang
 	return ret
 }
 
-func (ec *executionContext) marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx context.Context, sel ast.SelectionSet, v *model.Article) graphql.Marshaler {
+func (ec *executionContext) marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticle(ctx context.Context, sel ast.SelectionSet, v *model.Article) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3726,16 +3726,16 @@ func (ec *executionContext) marshalNArticle2ᚖgithubᚗcomᚋwill3gᚋgolangᚑ
 	return ec._Article(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNArticleInstance2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐArticleInstance(ctx context.Context, v interface{}) (model.ArticleInstance, error) {
+func (ec *executionContext) unmarshalNArticleInstance2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐArticleInstance(ctx context.Context, v interface{}) (model.ArticleInstance, error) {
 	res, err := ec.unmarshalInputArticleInstance(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNAuthor2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx context.Context, sel ast.SelectionSet, v model.Author) graphql.Marshaler {
+func (ec *executionContext) marshalNAuthor2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx context.Context, sel ast.SelectionSet, v model.Author) graphql.Marshaler {
 	return ec._Author(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthorᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Author) graphql.Marshaler {
+func (ec *executionContext) marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthorᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Author) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3759,7 +3759,7 @@ func (ec *executionContext) marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgolang�
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, sel, v[i])
+			ret[i] = ec.marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3779,7 +3779,7 @@ func (ec *executionContext) marshalNAuthor2ᚕᚖgithubᚗcomᚋwill3gᚋgolang�
 	return ret
 }
 
-func (ec *executionContext) marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx context.Context, sel ast.SelectionSet, v *model.Author) graphql.Marshaler {
+func (ec *executionContext) marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthor(ctx context.Context, sel ast.SelectionSet, v *model.Author) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3789,7 +3789,7 @@ func (ec *executionContext) marshalNAuthor2ᚖgithubᚗcomᚋwill3gᚋgolangᚑb
 	return ec._Author(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNAuthorInstance2githubᚗcomᚋwill3gᚋgolangᚑboilerplatesᚋgolangᚑgraphqlᚋgraphᚋmodelᚐAuthorInstance(ctx context.Context, v interface{}) (model.AuthorInstance, error) {
+func (ec *executionContext) unmarshalNAuthorInstance2githubᚗcomᚋwill3gᚋgoᚑwithᚑgraphqlᚋgraphᚋmodelᚐAuthorInstance(ctx context.Context, v interface{}) (model.AuthorInstance, error) {
 	res, err := ec.unmarshalInputAuthorInstance(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }

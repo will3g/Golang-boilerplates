@@ -1,6 +1,6 @@
 package graph
 
-import "github.com/will3g/golang-boilerplates/golang-graphql/internal/database"
+import "github.com/will3g/golang-boilerplates/go-with-graphql/internal/database"
 
 // This file will not be regenerated automatically.
 //

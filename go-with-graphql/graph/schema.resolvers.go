@@ -6,39 +6,107 @@ package graph
 
 import (
 	"context"
-	"fmt"
 
-	"github.com/will3g/golang-boilerplates/golang-graphql/graph/model"
+	"github.com/will3g/golang-boilerplates/go-with-graphql/graph/model"
 )
 
 // AuthorID is the resolver for the authorId field.
 func (r *articleResolver) AuthorID(ctx context.Context, obj *model.Article) (*model.Author, error) {
-	panic(fmt.Errorf("not implemented: AuthorID - authorId"))
+	author, err := r.AuthorDB.FindByArticleID(obj.ID)
+	if err != nil {
+		return nil, err
+	}
+	return &model.Author{
+		ID:          author.ID,
+		Name:        author.Name,
+		Description: author.Description,
+		Email:       author.Email,
+	}, nil
 }
 
 // Articles is the resolver for the articles field.
 func (r *authorResolver) Articles(ctx context.Context, obj *model.Author) ([]*model.Article, error) {
-	panic(fmt.Errorf("not implemented: Articles - articles"))
+	articles, err := r.ArticleDB.FindByAuthorID(obj.ID)
+	if err != nil {
+		return nil, err
+	}
+	var articlesModel []*model.Article
+	for _, article := range articles {
+		articlesModel = append(articlesModel, &model.Article{
+			ID:       article.ID,
+			Title:    article.Title,
+			Subtitle: article.Subtitle,
+			Body:     article.Body,
+			AuthorID: article.AuthorID,
+		})
+	}
+	return articlesModel, nil
 }
 
 // CreateAuthor is the resolver for the createAuthor field.
 func (r *mutationResolver) CreateAuthor(ctx context.Context, input model.AuthorInstance) (*model.Author, error) {
-	panic(fmt.Errorf("not implemented: CreateAuthor - createAuthor"))
+	author, err := r.AuthorDB.Create(*input.Name, *input.Description, input.Email)
+	if err != nil {
+		return nil, err
+	}
+	return &model.Author{
+		ID:          author.ID,
+		Name:        author.Name,
+		Description: author.Description,
+		Email:       author.Email,
+	}, nil
 }
 
 // CreateArticle is the resolver for the createArticle field.
 func (r *mutationResolver) CreateArticle(ctx context.Context, input model.ArticleInstance) (*model.Article, error) {
-	panic(fmt.Errorf("not implemented: CreateArticle - createArticle"))
+	article, err := r.ArticleDB.Create(input.Title, *input.Subtitle, *input.Body, input.AuthorID)
+	if err != nil {
+		return nil, err
+	}
+	return &model.Article{
+		ID:       article.ID,
+		Title:    article.Title,
+		Subtitle: article.Subtitle,
+		Body:     article.Body,
+		AuthorID: article.AuthorID,
+	}, nil
 }
 
 // Authors is the resolver for the authors field.
 func (r *queryResolver) Authors(ctx context.Context) ([]*model.Author, error) {
-	panic(fmt.Errorf("not implemented: Authors - authors"))
+	authors, err := r.AuthorDB.FindAll()
+	if err != nil {
+		return nil, err
+	}
+	var authorsModel []*model.Author
+	for _, author := range authors {
+		authorsModel = append(authorsModel, &model.Author{
+			ID:          author.ID,
+			Name:        author.Name,
+			Description: author.Description,
+			Email:       author.Email,
+		})
+	}
+	return authorsModel, nil
 }
 
 // Articles is the resolver for the articles field.
 func (r *queryResolver) Articles(ctx context.Context) ([]*model.Article, error) {
-	panic(fmt.Errorf("not implemented: Articles - articles"))
+	articles, err := r.ArticleDB.FindAll()
+	if err != nil {
+		return nil, err
+	}
+	var articlesModel []*model.Article
+	for _, article := range articles {
+		articlesModel = append(articlesModel, &model.Article{
+			ID:       article.ID,
+			Title:    article.Title,
+			Subtitle: article.Subtitle,
+			Body:     article.Body,
+			AuthorID: article.AuthorID,
+		})
+	}
+	return articlesModel, nil
 }
 
 // Article returns ArticleResolver implementation.

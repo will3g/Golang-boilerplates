@@ -10,8 +10,8 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/will3g/golang-boilerplates/golang-graphql/graph"
-	"github.com/will3g/golang-boilerplates/golang-graphql/internal/database"
+	"github.com/will3g/golang-boilerplates/go-with-graphql/graph"
+	"github.com/will3g/golang-boilerplates/go-with-graphql/internal/database"
 )
 
 const defaultPort = "8080"

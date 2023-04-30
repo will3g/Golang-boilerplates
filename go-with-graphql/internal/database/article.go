@@ -61,7 +61,7 @@ func (articlePointer *Article) FindAll() ([]Article, error) {
 }
 
 func (articlePointer *Article) FindByAuthorID(authorID string) ([]Article, error) {
-	rows, err := articlePointer.db.Query("SELECT id, title, subtitle, body, author_id FROM courses WHERE author_id = $1", authorID)
+	rows, err := articlePointer.db.Query("SELECT id, title, subtitle, body, author_id FROM articles WHERE author_id = $1", authorID)
 	if err != nil {
 		return nil, err
 	}

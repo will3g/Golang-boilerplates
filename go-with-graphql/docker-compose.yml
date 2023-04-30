@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  go-with-graphql:
+    build: .
+    hostname: go-with-graphql
+    container_name: go-with-graphql
+    volumes:
+      - .:/go/go-with-graphql
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"

@@ -2,6 +2,10 @@
 
 This is a simple **GraphQL API** boilerplate built using **gqlgen** and **Golang**. It uses **sqlite3** as the database engine and the uuid library for generating unique IDs.
 
+# Demo
+
+![Golang with GraphQL demonstration](https://i.imgur.com/uG3tyfG.gif)
+
 # Getting Started
 To get started with this API, clone the repository and run the following commands:
 
